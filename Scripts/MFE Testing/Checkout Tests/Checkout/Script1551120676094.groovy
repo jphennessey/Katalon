@@ -22,7 +22,7 @@ WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'
 
 WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_Login/iframe_signIn'), 0)
 
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_Login/input_username'), 'jphtest@yopmail.com')
+WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_Login/input_username'), 'jphmfe@yopmail.com')
 
 WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_Login/input_password'), 'test123')
 
@@ -37,6 +37,22 @@ WebUI.click(findTestObject('MFE Testing Pages/Header/ProductSearch/button_produc
 WebUI.verifyElementText(findTestObject('MFE Testing Pages/Page_PLP/text_searchResults'), 'Showing 1 results for \'hennessy black 750\'')
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_PLP/img_firstResult'))
+
+WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Page_PDP/button_addToCart'))
+
+WebUI.click(findTestObject('MFE Testing Pages/Page_PDP/button_viewCart'))
+
+WebUI.click(findTestObject('MFE Testing Pages/Cart/button_SecureCheckout'))
+
+WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
+
+WebUI.delay(1)
+
+WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
+
+WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/label_IamAtLeast21yearsOldCheckbox'))
+
+WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/button_PlaceOrder'))
 
 WebUI.closeBrowser()
 
