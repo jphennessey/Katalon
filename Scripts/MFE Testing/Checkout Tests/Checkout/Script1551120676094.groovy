@@ -18,7 +18,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Load QA with new MFEs'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInCreateAccount'))
+WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'))
 
 WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_Login/iframe_signIn'), 0)
 
@@ -30,9 +30,9 @@ WebUI.click(findTestObject('MFE Testing Pages/Page_Login/button_signIn'))
 
 WebUI.verifyElementVisibleInViewport(findTestObject('MFE Testing Pages/Page_AccountHome/h2_welcomeBackUser'), 5)
 
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/input_Search_text'), 'hennessy black 750')
+WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 'hennessy black 750')
 
-WebUI.click(findTestObject('MFE Testing Pages/Header/button_Search'))
+WebUI.click(findTestObject('MFE Testing Pages/Header/ProductSearch/button_productFinderSearch'))
 
 WebUI.verifyElementText(findTestObject('MFE Testing Pages/Page_PLP/text_searchResults'), 'Showing 1 results for \'hennessy black 750\'')
 

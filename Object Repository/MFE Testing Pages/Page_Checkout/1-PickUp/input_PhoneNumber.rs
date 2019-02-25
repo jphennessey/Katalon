@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Phone Number_Inputstyled</name>
+   <name>input_PhoneNumber</name>
    <tag></tag>
    <elementGuidId>2b806829-6dbb-48b4-8b3c-246749fca470</elementGuidId>
    <selectorCollection>
