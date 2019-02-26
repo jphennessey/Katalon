@@ -28,7 +28,9 @@ WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_Login/input_password'), 't
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Login/button_signIn'))
 
-WebUI.verifyElementVisibleInViewport(findTestObject('MFE Testing Pages/Page_AccountHome/h2_welcomeBackUser'), 5)
+WebUI.delay(5)
+
+not_run: WebUI.verifyElementInViewport(findTestObject('MFE Testing Pages/Page_AccountHome/h2_welcomeBackUser'), 5)
 
 WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 'hennessy black 750')
 
