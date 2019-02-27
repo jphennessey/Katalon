@@ -66,7 +66,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/MFE Testing Pages/Page_Login/iframe_signIn</value>
+      <value>Object Repository/MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

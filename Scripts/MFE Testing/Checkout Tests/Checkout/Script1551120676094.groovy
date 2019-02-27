@@ -20,17 +20,21 @@ WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Load QA with new MFEs
 
 WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'))
 
-WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_Login/iframe_signIn'), 0)
+WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount'), 0)
 
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_Login/input_username'), 'jphmfe@yopmail.com')
+WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_username'), 'jphmfe@yopmail.com')
 
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_Login/input_password'), 'test123')
+WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_password'), 'test123')
 
-WebUI.click(findTestObject('MFE Testing Pages/Page_Login/button_signIn'))
+WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/button_signIn'))
+
+not_run: WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Create Random Account'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(5)
 
 not_run: WebUI.verifyElementInViewport(findTestObject('MFE Testing Pages/Page_AccountHome/h2_welcomeBackUser'), 5)
+
+WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 'hennessy black 750')
 

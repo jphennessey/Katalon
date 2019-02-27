@@ -12,33 +12,22 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Cookie as Cookie
-import org.openqa.selenium.WebDriver as WebDriver
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.openBrowser('https://qa.totalwine.com')
+boolean mergeCartModalPresent = WebUI.verifyElementVisible(findTestObject('MFE Testing Pages/Account Home/Cart Merge Modal/div_Dont forget those other it'), 
+    FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'))
+if (mergeCartModalPresent) {
+    WebUI.click(findTestObject('MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard') //    cartEmpty = WebUI.verifyElementVisible(findTestObject('MFE Testing Pages/Cart/text_emptyCartMessage'), FailureHandling.CONTINUE_ON_FAILURE)
+        )
+} else {
+    WebUI.click(findTestObject('MFE Testing Pages/Header/icon_shoppingCart'))
 
-Cookie ck1 = new Cookie('2018Q2_OCHEADER', 'enabled')
+    cartNotEmpty = WebUI.verifyElementVisible(findTestObject('MFE Testing Pages/Cart/a_DeleteItem'), FailureHandling.CONTINUE_ON_FAILURE)
 
-Cookie ck2 = new Cookie('2018Q3_CART', 'enabled')
+    if (cartNotEmpty) {
+        WebUI.click(findTestObject('MFE Testing Pages/Cart/a_DeleteItem'))
 
-Cookie ck3 = new Cookie('2018Q2_PDP', 'enabled')
-
-Cookie ck4 = new Cookie('2018Q4_CHECKOUT', 'enabled')
-
-WebDriver driver = DriverFactory.getWebDriver()
-
-driver.manage().addCookie(ck1)
-
-driver.manage().addCookie(ck2)
-
-driver.manage().addCookie(ck3)
-
-driver.manage().addCookie(ck4)
-
-WebUI.refresh()
-
-WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'))
+        WebUI.click(findTestObject('MFE Testing Pages/Cart/button_confirmDelete'))
+    }
+}
 
