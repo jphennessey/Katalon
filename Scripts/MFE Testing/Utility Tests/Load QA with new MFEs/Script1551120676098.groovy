@@ -18,8 +18,6 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.openBrowser('https://qa.totalwine.com')
 
-WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'))
-
 Cookie ck1 = new Cookie('2018Q2_OCHEADER', 'enabled')
 
 Cookie ck2 = new Cookie('2018Q3_CART', 'enabled')

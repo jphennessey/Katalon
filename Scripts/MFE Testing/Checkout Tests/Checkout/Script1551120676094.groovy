@@ -34,8 +34,6 @@ not_run: WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Create Rando
 
 WebUI.delay(5)
 
-not_run: WebUI.verifyElementInViewport(findTestObject('MFE Testing Pages/Page_AccountHome/h2_welcomeBackUser'), 5)
-
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.delay(2)
