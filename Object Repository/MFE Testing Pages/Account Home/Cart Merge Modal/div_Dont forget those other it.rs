@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>icon_shoppingCart</name>
+   <name>div_Dont forget those other it</name>
    <tag></tag>
-   <elementGuidId>73dcf56d-6fd7-435d-a3d2-854ac2a369b6</elementGuidId>
+   <elementGuidId>55daad8e-5e35-44a4-86f9-a6a6fdb6ba16</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//section[@id='plp-product-tab1']/section[2]/ul/li/div/div/div/a/img</value>
+         <value>//section[@id='cartMergeModal']/div/div/div/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -17,76 +17,63 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>img</value>
+      <value>div</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>heading-h1</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>src</name>
+      <name>text</name>
       <type>Main</type>
-      <value>https://qa.totalwine.com/media/sys_master/twmmedia/h22/hf7/10066822365214.png</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>alt</name>
-      <type>Main</type>
-      <value>Hennessy Black</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>title</name>
-      <type>Main</type>
-      <value>Hennessy Black</value>
+      <value>	Don't forget those other items.	</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;plp-product-tab1&quot;)/section[@class=&quot;plp-product-content grid-view&quot;]/ul[@class=&quot;plp-list&quot;]/li[1]/div[@class=&quot;plp-product-content-wrapper&quot;]/div[@class=&quot;plp-list-img&quot;]/div[@class=&quot;plp-list-product-img&quot;]/a[1]/img[1]</value>
+      <value>id(&quot;cartMergeModal&quot;)/div[@class=&quot;modal-dialog&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body&quot;]/div[@class=&quot;heading-h1&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//section[@id='plp-product-tab1']/section[2]/ul/li/div/div/div/a/img</value>
+      <value>//section[@id='cartMergeModal']/div/div/div/div</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Bottle'])[1]/following::img[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Proceed'])[1]/following::div[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Bottle deposits where required by law. OR Keg deposits refunded upon return of keg.'])[1]/following::img[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Discard items'])[1]/following::div[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hennessy Black'])[1]/preceding::img[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='$'])[1]/preceding::div[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='France'])[1]/preceding::img[1]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:img</name>
-      <value>//img[@alt='Hennessy Black']</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Schweppes Tonic Diet'])[1]/preceding::div[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//a/img</value>
+      <value>//section[2]/div/div/div/div</value>
    </webElementXpaths>
 </WebElementEntity>

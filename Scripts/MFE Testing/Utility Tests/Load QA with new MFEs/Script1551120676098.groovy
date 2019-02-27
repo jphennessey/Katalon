@@ -40,5 +40,5 @@ driver.manage().addCookie(ck4)
 
 WebUI.refresh()
 
-WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'))
+WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
 
