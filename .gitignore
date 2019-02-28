@@ -3,3 +3,5 @@
 /.settings/
 /.classpath
 .svn/
+/.project
+/bin/lib/
