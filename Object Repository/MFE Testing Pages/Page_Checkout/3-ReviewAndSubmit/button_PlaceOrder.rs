@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//button[@type='primary'])[2]</value>
+         <value>//button[text()='Place Order']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

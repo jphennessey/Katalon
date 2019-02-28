@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='Per Unit'])[1]/following::button[1]	</value>
+         <value>//button[text()='Add to Cart']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

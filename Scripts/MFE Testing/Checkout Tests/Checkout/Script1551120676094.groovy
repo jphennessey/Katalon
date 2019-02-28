@@ -64,6 +64,8 @@ WebUI.delay(1)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/label_IamAtLeast21yearsOldCheckbox'))
 
+WebUI.delay(1)
+
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/button_PlaceOrder'))
 
 WebUI.closeBrowser()
