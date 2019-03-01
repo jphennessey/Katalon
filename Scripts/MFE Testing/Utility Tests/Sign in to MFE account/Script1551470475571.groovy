@@ -23,5 +23,5 @@ WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/button_signIn'))
 
-WebUI.waitForPageLoad(5)
+WebUI.waitForPageLoad(GlobalVariable.G_mediumTimeout)
 
