@@ -6,3 +6,15 @@
 .project
 /.project
 /bin/lib/
+/Reports/
+/bin/lib/Temp*.class
+/libs/Temp*.groovy
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar

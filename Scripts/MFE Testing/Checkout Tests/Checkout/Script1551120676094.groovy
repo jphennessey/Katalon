@@ -54,7 +54,9 @@ WebUI.click(findTestObject('MFE Testing Pages/Cart/button_SecureCheckout'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
 
-WebUI.delay(1)
+not_run: WebUI.delay(1)
+
+WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Page_Checkout/2-Payment/link_addPromoCode'), 1)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
 
