@@ -32,7 +32,9 @@ WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/bu
 
 not_run: WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Create Random Account'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(5)
+not_run: WebUI.delay(5)
+
+WebUI.waitForPageLoad(5)
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
