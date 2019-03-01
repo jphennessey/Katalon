@@ -18,21 +18,9 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Load QA with new MFEs'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForPageLoad(2)
-
-WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'))
-
-WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount'), 0)
-
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_username'), 'jphmfe@yopmail.com')
-
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_password'), 'test123')
-
-WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/button_signIn'))
+WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Sign in to MFE account'), [:], FailureHandling.STOP_ON_FAILURE)
 
 not_run: WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Create Random Account'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.waitForPageLoad(5)
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -54,7 +42,7 @@ WebUI.click(findTestObject('MFE Testing Pages/Cart/button_SecureCheckout'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
 
-WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Page_Checkout/2-Payment/link_addPromoCode'), 1)
+WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Page_Checkout/2-Payment/link_addPromoCode'), 2)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
 

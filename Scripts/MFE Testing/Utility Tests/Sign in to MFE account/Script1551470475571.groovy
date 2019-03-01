@@ -12,35 +12,16 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Cookie as Cookie
-import org.openqa.selenium.WebDriver as WebDriver
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.openBrowser('https://qa.totalwine.com')
+WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'))
 
-WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
+WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount'), 0)
 
-Cookie ck1 = new Cookie('2018Q2_OCHEADER', 'enabled')
+WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_username'), 'jphmfe@yopmail.com')
 
-Cookie ck2 = new Cookie('2018Q3_CART', 'enabled')
+WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_password'), 'test123')
 
-Cookie ck3 = new Cookie('2018Q2_PDP', 'enabled')
+WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/button_signIn'))
 
-Cookie ck4 = new Cookie('2018Q4_CHECKOUT', 'enabled')
-
-WebDriver driver = DriverFactory.getWebDriver()
-
-driver.manage().addCookie(ck1)
-
-driver.manage().addCookie(ck2)
-
-driver.manage().addCookie(ck3)
-
-driver.manage().addCookie(ck4)
-
-WebUI.refresh()
-
-WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
-
-WebUI.waitForPageLoad(2)
+WebUI.waitForPageLoad(5)
 
