@@ -13,19 +13,23 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-cartNotEmpty = WebUI.verifyElementVisible(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'), FailureHandling.OPTIONAL)
+not_run: cartNotEmpty = WebUI.verifyElementVisible(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'), 
+    FailureHandling.OPTIONAL)
+
+cartNotEmpty = WebUI.verifyElementInViewport(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'), 
+    5, FailureHandling.OPTIONAL)
 
 if (cartNotEmpty) {
-	WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'))
+    WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'))
 } else {
-	cartNotEmpty = WebUI.verifyElementVisible(findTestObject('MFE Testing Pages/Header/span_cartItemCount'), FailureHandling.OPTIONAL)
-	
-	if (cartNotEmpty) {
-	    WebUI.click(findTestObject('MFE Testing Pages/Header/span_cartItemCount'))
-	
-	    WebUI.click(findTestObject('MFE Testing Pages/Cart/a_DeleteItem'))
-	
-	    WebUI.click(findTestObject('MFE Testing Pages/Cart/button_confirmDelete'))
-	}
+    cartNotEmpty = WebUI.verifyElementVisible(findTestObject('MFE Testing Pages/Header/span_cartItemCount'), FailureHandling.OPTIONAL)
+
+    if (cartNotEmpty) {
+        WebUI.click(findTestObject('MFE Testing Pages/Header/span_cartItemCount'))
+
+        WebUI.click(findTestObject('MFE Testing Pages/Cart/a_DeleteItem'))
+
+        WebUI.click(findTestObject('MFE Testing Pages/Cart/button_confirmDelete'))
+    }
 }
 

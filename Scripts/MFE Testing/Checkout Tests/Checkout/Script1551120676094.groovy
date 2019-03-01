@@ -18,7 +18,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Load QA with new MFEs'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(2)
+WebUI.waitForPageLoad(2)
 
 WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'))
 
@@ -31,8 +31,6 @@ WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login
 WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/button_signIn'))
 
 not_run: WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Create Random Account'), [:], FailureHandling.STOP_ON_FAILURE)
-
-not_run: WebUI.delay(5)
 
 WebUI.waitForPageLoad(5)
 
@@ -56,13 +54,11 @@ WebUI.click(findTestObject('MFE Testing Pages/Cart/button_SecureCheckout'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
 
-not_run: WebUI.delay(1)
-
 WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Page_Checkout/2-Payment/link_addPromoCode'), 1)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
 
-WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/button_PlaceOrder'), 1)
+WebUI.waitForPageLoad(2)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/label_IamAtLeast21yearsOldCheckbox'))
 
