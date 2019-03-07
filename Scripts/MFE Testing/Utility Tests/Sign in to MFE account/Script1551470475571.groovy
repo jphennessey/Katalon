@@ -13,6 +13,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'), 3)
+
 WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'))
 
 WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount'), 0)

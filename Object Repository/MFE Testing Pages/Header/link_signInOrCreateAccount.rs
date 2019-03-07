@@ -6,6 +6,10 @@
    <elementGuidId>25352a18-b01c-4664-9786-7b91cd803583</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//div[@id = 'userNameGreeting' and (text() = 'Sign In | Create Account' or . = 'Sign In | Create Account')]</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//div[@id='userNameGreeting']</value>
       </entry>

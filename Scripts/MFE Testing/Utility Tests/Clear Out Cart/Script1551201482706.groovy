@@ -13,9 +13,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-not_run: cartNotEmpty = WebUI.verifyElementVisible(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'), 
-    FailureHandling.OPTIONAL)
-
 cartNotEmpty = WebUI.verifyElementInViewport(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'), 
     5, FailureHandling.OPTIONAL)
 
