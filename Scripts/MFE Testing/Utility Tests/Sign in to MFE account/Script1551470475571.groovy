@@ -17,11 +17,11 @@ WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'
 
 WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount'), 0)
 
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_username'), 'jphmfe@yopmail.com')
+WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_username'), username_MFE_testAccount)
 
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_password'), 'test123')
+WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_password'), password)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/button_signIn'))
 
-WebUI.waitForPageLoad(GlobalVariable.G_mediumTimeout)
+WebUI.waitForPageLoad(5)
 

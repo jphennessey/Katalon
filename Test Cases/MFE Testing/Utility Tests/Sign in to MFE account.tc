@@ -5,4 +5,18 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b5a0210c-0699-47f5-b346-1d664e46b4d8</testCaseGuid>
+   <variable>
+      <defaultValue>'jphmfe@yopmail.com'</defaultValue>
+      <description></description>
+      <id>95b55c7d-69f6-42ea-94f7-b62ab3ff4e80</id>
+      <masked>false</masked>
+      <name>username_MFE_testAccount</name>
+   </variable>
+   <variable>
+      <defaultValue>'test123'</defaultValue>
+      <description></description>
+      <id>4057160a-b901-49fd-a2c6-ccc4423d3419</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
 </TestCaseEntity>
