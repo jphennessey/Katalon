@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Checkout (DOT_29357_Desktop)</name>
+   <name>Checkout</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>15a0104a-cdb7-4726-8b00-b5f3a903503a</testCaseGuid>
