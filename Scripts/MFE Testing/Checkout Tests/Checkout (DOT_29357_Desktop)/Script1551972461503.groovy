@@ -20,8 +20,6 @@ WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Load QA with new MFEs
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Sign in to MFE account'), [:], FailureHandling.STOP_ON_FAILURE)
 
-not_run: WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Create Random Account'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
 not_run: WebUI.delay(GlobalVariable.G_smallTimeout)
