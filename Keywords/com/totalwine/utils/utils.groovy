@@ -23,8 +23,8 @@ public class utils {
 	@Keyword
 	def Boolean isDesktop() {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize()
-//		Integer screenHeight = screenSize.height
-//		Integer screenWidth = screenSize.width
+		//		Integer screenHeight = screenSize.height
+		//		Integer screenWidth = screenSize.width
 		return (screenSize.width > 1024)
 	}
 }

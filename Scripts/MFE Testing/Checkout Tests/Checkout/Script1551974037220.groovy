@@ -30,7 +30,8 @@ WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_prod
 
 WebUI.click(findTestObject('MFE Testing Pages/Header/ProductSearch/button_productFinderSearch'))
 
-WebUI.verifyElementText(findTestObject('MFE Testing Pages/Page_PLP/text_searchResults'), 'Showing 1 results for \'hennessy black 750\'')
+WebUI.verifyElementText(findTestObject('MFE Testing Pages/Page_PLP/text_searchResults'), 'Showing 1 results for \'hennessy black 750\'', 
+    FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_PLP/img_firstResult'))
 
