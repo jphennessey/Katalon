@@ -14,4 +14,14 @@
       <initValue>5</initValue>
       <name>G_mediumTimeout</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Sacramento (Arden), CA'</initValue>
+      <name>G_sacramentoDisplayed</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'sacramento, ca'</initValue>
+      <name>G_sacramentoSearch</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

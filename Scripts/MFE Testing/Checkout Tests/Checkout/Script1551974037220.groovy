@@ -24,6 +24,8 @@ WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:]
 
 WebUI.delay(GlobalVariable.G_smallTimeout)
 
+WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Change Store'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 'hennessy black 750')
 
 WebUI.click(findTestObject('MFE Testing Pages/Header/ProductSearch/button_productFinderSearch'))
@@ -50,6 +52,10 @@ WebUI.waitForPageLoad(GlobalVariable.G_smallTimeout)
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/label_IamAtLeast21yearsOldCheckbox'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/button_PlaceOrder'))
+
+WebUI.delay(GlobalVariable.G_smallTimeout)
+
+WebUI.verifyElementText(findTestObject('MFE Testing Pages/Page_Checkout/4-Confirmation/text_confirmationTitle'), 'Order confirmation')
 
 WebUI.closeBrowser()
 
