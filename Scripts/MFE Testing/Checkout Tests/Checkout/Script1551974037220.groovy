@@ -22,9 +22,9 @@ WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Sign in to MFE accoun
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
-not_run: WebUI.delay(GlobalVariable.G_smallTimeout)
+WebUI.delay(GlobalVariable.G_smallTimeout)
 
-WebUI.delay(2)
+not_run: WebUI.delay(2)
 
 WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 'hennessy black 750')
 
