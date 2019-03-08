@@ -42,5 +42,5 @@ WebUI.refresh()
 
 WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
 
-WebUI.waitForPageLoad(2)
+WebUI.waitForPageLoad(GlobalVariable.G_smallTimeout)
 

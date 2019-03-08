@@ -14,7 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 cartNotEmpty = WebUI.verifyElementInViewport(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'), 
-    5, FailureHandling.OPTIONAL)
+    GlobalVariable.G_mediumTimeout, FailureHandling.OPTIONAL)
 
 if (cartNotEmpty) {
     WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'))
