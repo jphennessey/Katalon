@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'), GlobalVariable.G_smallTimeout)
+WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'), GlobalVariable.G_mediumLongTimeout)
 
 not_run: WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'), 3)
 

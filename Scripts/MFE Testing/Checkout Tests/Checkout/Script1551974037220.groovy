@@ -22,28 +22,31 @@ WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Sign in to MFE accoun
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
-GlobalVariable.G_storeSearch = "sacramento, ca"
+GlobalVariable.G_storeSearch = 'sacramento, ca'
 
-GlobalVariable.G_storeDisplayed = "Sacramento (Arden), CA"
+GlobalVariable.G_storeDisplayed = 'Sacramento (Arden), CA'
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Change Store'), [:], FailureHandling.STOP_ON_FAILURE)
 
-'search for an item'
-WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 'hennessy black 750')
+GlobalVariable.G_productSearch = GlobalVariable.G_sku1
 
-WebUI.click(findTestObject('MFE Testing Pages/Header/ProductSearch/button_productFinderSearch'))
+GlobalVariable.G_productCount = '2'
 
-'verify PLP results'
-WebUI.verifyElementText(findTestObject('MFE Testing Pages/Page_PLP/text_searchResults'), 'Showing 1 results for \'hennessy black 750\'', 
-    FailureHandling.STOP_ON_FAILURE)
+GlobalVariable.G_viewCartAfterAdd = false
 
-'click the single result image'
-WebUI.click(findTestObject('MFE Testing Pages/Page_PLP/img_firstResult'))
+WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Search Product and Add to Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
-'add the item to the cart from the PDP'
-WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Page_PDP/button_addToCart'))
+not_run: WebUI.delay(GlobalVariable.G_mediumLongTimeout)
 
-WebUI.click(findTestObject('MFE Testing Pages/Page_PDP/button_viewCart'))
+GlobalVariable.G_productSearch = GlobalVariable.G_sku2
+
+GlobalVariable.G_productCount = '6'
+
+GlobalVariable.G_viewCartAfterAdd = true
+
+WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Search Product and Add to Cart'), [:], FailureHandling.STOP_ON_FAILURE)
+
+not_run: WebUI.click(findTestObject('MFE Testing Pages/Page_PDP/button_viewCart'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Cart/button_SecureCheckout'))
 

@@ -16,27 +16,47 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Sacramento (Arden), CA'</initValue>
+      <initValue>''</initValue>
       <name>G_storeDisplayed</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'sacramento, ca'</initValue>
+      <initValue>''</initValue>
       <name>G_storeSearch</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
+      <description>Hennessy Black 750</description>
+      <initValue>'108148750-1'</initValue>
       <name>G_sku1</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
+      <description>Mix6 eligible cava</description>
+      <initValue>'178706750-1'</initValue>
       <name>G_sku2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
       <name>G_sku3</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_productSearch</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_productCount</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>G_viewCartAfterAdd</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>9</initValue>
+      <name>G_mediumLongTimeout</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
