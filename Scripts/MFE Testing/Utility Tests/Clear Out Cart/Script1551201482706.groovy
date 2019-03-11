@@ -18,15 +18,17 @@ cartNotEmpty = WebUI.verifyElementInViewport(findTestObject('Object Repository/M
 
 if (cartNotEmpty) {
     WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Account Home/Cart Merge Modal/button_Discard'))
+
+    WebUI.delay(GlobalVariable.G_smallTimeout)
 } else {
-    cartNotEmpty = WebUI.verifyElementVisible(findTestObject('MFE Testing Pages/Header/span_cartItemCount'), FailureHandling.OPTIONAL)
+    not_run: cartNotEmpty = WebUI.verifyElementVisible(findTestObject('MFE Testing Pages/Header/span_cartItemCount'), FailureHandling.OPTIONAL)
 
-    if (cartNotEmpty) {
-        WebUI.click(findTestObject('MFE Testing Pages/Header/span_cartItemCount'))
+    not_run: if (cartNotEmpty) {
+        not_run: WebUI.click(findTestObject('MFE Testing Pages/Header/span_cartItemCount'))
 
-        WebUI.click(findTestObject('MFE Testing Pages/Cart/a_DeleteItem'))
+        not_run: WebUI.click(findTestObject('MFE Testing Pages/Cart/a_DeleteItem'))
 
-        WebUI.click(findTestObject('MFE Testing Pages/Cart/button_confirmDelete'))
+        not_run: WebUI.click(findTestObject('MFE Testing Pages/Cart/button_confirmDelete'))
     }
 }
 

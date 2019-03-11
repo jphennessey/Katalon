@@ -17,11 +17,26 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Sacramento (Arden), CA'</initValue>
-      <name>G_sacramentoDisplayed</name>
+      <name>G_storeDisplayed</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'sacramento, ca'</initValue>
-      <name>G_sacramentoSearch</name>
+      <name>G_storeSearch</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_sku1</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_sku2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_sku3</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

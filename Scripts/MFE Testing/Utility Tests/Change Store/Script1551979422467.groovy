@@ -16,12 +16,12 @@ import internal.GlobalVariable as GlobalVariable
 storeName = WebUI.getText(findTestObject('MFE Testing Pages/Header/ChangeStore/text_myStore'))
 
 'change to Sacramento if not already selected'
-if (storeName != GlobalVariable.G_sacramentoDisplayed) {
+if (storeName != GlobalVariable.G_storeDisplayed) {
     WebUI.click(findTestObject('MFE Testing Pages/Header/ChangeStore/div_expandStoreSearch'))
 
     WebUI.click(findTestObject('MFE Testing Pages/Header/ChangeStore/button_findOtherStores'))
 
-    WebUI.setText(findTestObject('MFE Testing Pages/Header/ChangeStore/input_storeFinderSearch'), GlobalVariable.G_sacramentoSearch)
+    WebUI.setText(findTestObject('MFE Testing Pages/Header/ChangeStore/input_storeFinderSearch'), GlobalVariable.G_storeSearch)
 
     WebUI.click(findTestObject('MFE Testing Pages/Header/ChangeStore/button_storeFinderSearch'))
 
@@ -31,6 +31,6 @@ if (storeName != GlobalVariable.G_sacramentoDisplayed) {
 
     WebUI.delay(GlobalVariable.G_smallTimeout)
 
-    WebUI.verifyElementText(findTestObject('MFE Testing Pages/Header/ChangeStore/text_myStore'), GlobalVariable.G_sacramentoDisplayed)
+    WebUI.verifyElementText(findTestObject('MFE Testing Pages/Header/ChangeStore/text_myStore'), GlobalVariable.G_storeDisplayed)
 }
 

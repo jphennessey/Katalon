@@ -22,7 +22,9 @@ WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Sign in to MFE accoun
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Out Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(GlobalVariable.G_smallTimeout)
+GlobalVariable.G_storeSearch = "sacramento, ca"
+
+GlobalVariable.G_storeDisplayed = "Sacramento (Arden), CA"
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Change Store'), [:], FailureHandling.STOP_ON_FAILURE)
 
