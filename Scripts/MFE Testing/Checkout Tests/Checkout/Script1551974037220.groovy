@@ -26,29 +26,36 @@ WebUI.delay(GlobalVariable.G_smallTimeout)
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Change Store'), [:], FailureHandling.STOP_ON_FAILURE)
 
+'search for an item'
 WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 'hennessy black 750')
 
 WebUI.click(findTestObject('MFE Testing Pages/Header/ProductSearch/button_productFinderSearch'))
 
+'verify PLP results'
 WebUI.verifyElementText(findTestObject('MFE Testing Pages/Page_PLP/text_searchResults'), 'Showing 1 results for \'hennessy black 750\'', 
     FailureHandling.STOP_ON_FAILURE)
 
+'click the single result image'
 WebUI.click(findTestObject('MFE Testing Pages/Page_PLP/img_firstResult'))
 
+'add the item to the cart from the PDP'
 WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Page_PDP/button_addToCart'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_PDP/button_viewCart'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Cart/button_SecureCheckout'))
 
+'checkout page 1'
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
 
 WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Page_Checkout/2-Payment/link_addPromoCode'), GlobalVariable.G_smallTimeout)
 
+'checkout page 2'
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/button_SaveAndContinue'))
 
 WebUI.waitForPageLoad(GlobalVariable.G_smallTimeout)
 
+'checkout page 3'
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/label_IamAtLeast21yearsOldCheckbox'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_Checkout/3-ReviewAndSubmit/button_PlaceOrder'))
