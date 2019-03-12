@@ -27,4 +27,21 @@ public class utils {
 		//		Integer screenWidth = screenSize.width
 		return (screenSize.width > 1024)
 	}
+
+	@Keyword
+	def clearText(TestObject field) {
+		def maxTries = 3
+		def contents = WebUI.getText(field)
+		def empty = (contents.length() == 0)
+		try {
+			while (!empty && (maxTries-- > 0)) {
+				WebUI.doubleClick(field)
+				WebUI.sendKeys(field, Keys.chord(Keys.BACK_SPACE))
+				contents = WebUI.getText(field)
+				empty = (contents.length() == 0)
+			}
+		} catch (Exception e) {
+			KeywordUtil.markFailed("Fail to clear field!")
+		}
+	}
 }
