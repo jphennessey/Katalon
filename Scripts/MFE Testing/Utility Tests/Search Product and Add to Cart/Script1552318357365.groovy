@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 //import org.openqa.selenium.WebElement as WebElement
 WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), GlobalVariable.G_smallTimeout)
 
-CustomKeywords.'com.totalwine.utils.utils.clearText'(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Search Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'search for an item'
 WebUI.setText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), GlobalVariable.G_productSearch)

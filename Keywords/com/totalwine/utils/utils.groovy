@@ -29,15 +29,17 @@ public class utils {
 	}
 
 	@Keyword
-	def clearText(TestObject field) {
+	def clearSearchText() {
 		def maxTries = 3
-		def contents = WebUI.getText(field)
+		def contents = WebUI.getText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
 		def empty = (contents.length() == 0)
+		
 		try {
 			while (!empty && (maxTries-- > 0)) {
-				WebUI.doubleClick(field)
-				WebUI.sendKeys(field, Keys.chord(Keys.BACK_SPACE))
-				contents = WebUI.getText(field)
+				WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+				WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 
+					Keys.chord(Keys.BACK_SPACE))
+				contents = WebUI.getText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
 				empty = (contents.length() == 0)
 			}
 		} catch (Exception e) {
