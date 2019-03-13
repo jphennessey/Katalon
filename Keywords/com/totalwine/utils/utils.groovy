@@ -32,36 +32,20 @@ public class utils {
 
 	@Keyword
 	def clearSearchText(TestObject to) {
-		//		def maxTries = 3
-		//		def contents = WebUI.getText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-		//		def empty = (contents.length() == 0)
-		//
-		//		try {
-		//			while (!empty && (maxTries-- > 0)) {
-		//				WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-		//				WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'),
-		//						Keys.chord(Keys.BACK_SPACE))
-		//				contents = WebUI.getText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-		//				empty = (contents.length() == 0)
-		//			}
-		//		} catch (Exception e) {
-		//			KeywordUtil.markFailed("Fail to clear field!")
-		//		}
+		def maxTries = 3
+		def contents = WebUI.getAttribute(to, 'value')
+		def empty = (contents.length() == 0)
 
-
-		WebUI.doubleClick(to)
-
-		WebUI.sendKeys(to,Keys.chord(Keys.BACK_SPACE))
-
-		WebUI.doubleClick(to)
-
-		WebUI.sendKeys(to,Keys.chord(Keys.BACK_SPACE))
-
-		WebUI.doubleClick(to)
-
-		WebUI.sendKeys(to,Keys.chord(Keys.BACK_SPACE))
-
-
+		try {
+			while (!empty && (maxTries-- > 0)) {
+				WebUI.doubleClick(to)
+				WebUI.sendKeys(to, Keys.chord(Keys.BACK_SPACE))
+				contents = WebUI.getAttribute(to, 'value')
+				empty = (contents.length() == 0)
+			}
+		} catch (Exception e) {
+			KeywordUtil.markFailed("Fail to clear field!")
+		}
 
 	}
 }
