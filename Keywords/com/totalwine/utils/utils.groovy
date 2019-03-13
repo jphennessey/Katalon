@@ -16,6 +16,8 @@ import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import java.awt.*
+import org.openqa.selenium.Keys as Keys
+
 
 import internal.GlobalVariable
 
@@ -29,21 +31,52 @@ public class utils {
 	}
 
 	@Keyword
-	def clearSearchText() {
-		def maxTries = 3
-		def contents = WebUI.getText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-		def empty = (contents.length() == 0)
-		
-		try {
-			while (!empty && (maxTries-- > 0)) {
-				WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-				WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), 
-					Keys.chord(Keys.BACK_SPACE))
-				contents = WebUI.getText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-				empty = (contents.length() == 0)
-			}
-		} catch (Exception e) {
-			KeywordUtil.markFailed("Fail to clear field!")
-		}
+	def clearSearchText(TestObject to) {
+		//		def maxTries = 3
+		//		def contents = WebUI.getText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+		//		def empty = (contents.length() == 0)
+		//
+		//		try {
+		//			while (!empty && (maxTries-- > 0)) {
+		//				WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+		//				WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'),
+		//						Keys.chord(Keys.BACK_SPACE))
+		//				contents = WebUI.getText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+		//				empty = (contents.length() == 0)
+		//			}
+		//		} catch (Exception e) {
+		//			KeywordUtil.markFailed("Fail to clear field!")
+		//		}
+
+
+
+		//		WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+		//
+		//		WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'),Keys.chord(Keys.BACK_SPACE))
+		//
+		//		WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+		//
+		//		WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'),Keys.chord(Keys.BACK_SPACE))
+		//
+		//		WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+		//
+		//		WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'),Keys.chord(Keys.BACK_SPACE))
+		//
+		//		WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+
+		WebUI.doubleClick(to)
+
+		WebUI.sendKeys(to,Keys.chord(Keys.BACK_SPACE))
+
+		WebUI.doubleClick(to)
+
+		WebUI.sendKeys(to,Keys.chord(Keys.BACK_SPACE))
+
+		WebUI.doubleClick(to)
+
+		WebUI.sendKeys(to,Keys.chord(Keys.BACK_SPACE))
+
+
+
 	}
 }
