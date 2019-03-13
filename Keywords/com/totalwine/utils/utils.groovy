@@ -49,21 +49,6 @@ public class utils {
 		//		}
 
 
-
-		//		WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-		//
-		//		WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'),Keys.chord(Keys.BACK_SPACE))
-		//
-		//		WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-		//
-		//		WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'),Keys.chord(Keys.BACK_SPACE))
-		//
-		//		WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-		//
-		//		WebUI.sendKeys(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'),Keys.chord(Keys.BACK_SPACE))
-		//
-		//		WebUI.doubleClick(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
-
 		WebUI.doubleClick(to)
 
 		WebUI.sendKeys(to,Keys.chord(Keys.BACK_SPACE))
