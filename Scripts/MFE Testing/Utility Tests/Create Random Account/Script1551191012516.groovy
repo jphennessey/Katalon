@@ -15,12 +15,12 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'))
 
-WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount'), 0)
+WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount'), GlobalVariable.G_longTimeout)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/CreateAccount/link_createAccountStartHere'))
 
 WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/CreateAccount/Page_newAccountForm/button_Register'), 
-    0)
+    GlobalVariable.G_smallTimeout)
 
 WebUI.setText(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/CreateAccount/Page_newAccountForm/input__firstName'), 
     'Joe')

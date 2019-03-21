@@ -20,8 +20,6 @@ import org.openqa.selenium.Keys as Keys
 //import org.openqa.selenium.WebElement as WebElement
 WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), GlobalVariable.G_smallTimeout)
 
-not_run: WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Clear Search Text'), [:], FailureHandling.STOP_ON_FAILURE)
-
 CustomKeywords.'com.totalwine.utils.utils.clearSearchText'(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
 
 'search for an item'
@@ -39,8 +37,6 @@ WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Page_PDP/button_
 if (GlobalVariable.G_viewCartAfterAdd) {
     WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Page_PDP/button_viewCart'))
 } else {
-    not_run: WebUI.delay(GlobalVariable.G_mediumLongTimeout)
-
-    WebUI.delay(15)
+    WebUI.delay(GlobalVariable.G_longTimeout)
 }
 

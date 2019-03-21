@@ -59,4 +59,9 @@
       <initValue>9</initValue>
       <name>G_mediumLongTimeout</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>15</initValue>
+      <name>G_longTimeout</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

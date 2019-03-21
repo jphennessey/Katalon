@@ -15,6 +15,7 @@ import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.util.KeywordUtil
 import java.awt.*
 import org.openqa.selenium.Keys as Keys
 
@@ -46,6 +47,5 @@ public class utils {
 		} catch (Exception e) {
 			KeywordUtil.markFailed("Fail to clear field!")
 		}
-
 	}
 }

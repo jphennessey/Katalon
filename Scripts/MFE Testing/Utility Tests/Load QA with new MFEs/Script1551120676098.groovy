@@ -16,7 +16,9 @@ import org.openqa.selenium.Cookie as Cookie
 import org.openqa.selenium.WebDriver as WebDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.openBrowser('https://qa.totalwine.com')
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://qa.totalwine.com')
 
 WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
 

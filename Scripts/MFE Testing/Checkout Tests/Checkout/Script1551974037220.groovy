@@ -36,8 +36,6 @@ GlobalVariable.G_viewCartAfterAdd = false
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Search Product and Add to Cart'), [:], FailureHandling.STOP_ON_FAILURE)
 
-not_run: WebUI.delay(GlobalVariable.G_mediumLongTimeout)
-
 GlobalVariable.G_productSearch = GlobalVariable.G_sku2
 
 GlobalVariable.G_productCount = '6'
@@ -45,8 +43,6 @@ GlobalVariable.G_productCount = '6'
 GlobalVariable.G_viewCartAfterAdd = true
 
 WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Search Product and Add to Cart'), [:], FailureHandling.STOP_ON_FAILURE)
-
-not_run: WebUI.click(findTestObject('MFE Testing Pages/Page_PDP/button_viewCart'))
 
 WebUI.click(findTestObject('MFE Testing Pages/Cart/button_SecureCheckout'))
 

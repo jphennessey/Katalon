@@ -17,7 +17,11 @@ storeName = WebUI.getText(findTestObject('MFE Testing Pages/Header/ChangeStore/t
 
 'change to Sacramento if not already selected'
 if (storeName != GlobalVariable.G_storeDisplayed) {
+    WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Header/ChangeStore/div_expandStoreSearch'), GlobalVariable.G_smallTimeout)
+
     WebUI.click(findTestObject('MFE Testing Pages/Header/ChangeStore/div_expandStoreSearch'))
+
+    WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Header/ChangeStore/button_findOtherStores'), GlobalVariable.G_smallTimeout)
 
     WebUI.click(findTestObject('MFE Testing Pages/Header/ChangeStore/button_findOtherStores'))
 
@@ -29,7 +33,7 @@ if (storeName != GlobalVariable.G_storeDisplayed) {
 
     WebUI.click(findTestObject('MFE Testing Pages/Header/ChangeStore/button_selectFirstStoreInList'))
 
-    WebUI.delay(GlobalVariable.G_smallTimeout)
+    WebUI.delay(GlobalVariable.G_mediumTimeout)
 
     WebUI.verifyElementText(findTestObject('MFE Testing Pages/Header/ChangeStore/text_myStore'), GlobalVariable.G_storeDisplayed)
 }
