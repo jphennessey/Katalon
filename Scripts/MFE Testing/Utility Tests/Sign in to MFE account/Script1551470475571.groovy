@@ -15,8 +15,6 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'), GlobalVariable.G_mediumLongTimeout)
 
-not_run: WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'), 3)
-
 WebUI.click(findTestObject('MFE Testing Pages/Header/link_signInOrCreateAccount'))
 
 WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/iframe_signInOrCreateAccount'), 0)
@@ -24,6 +22,8 @@ WebUI.verifyElementPresent(findTestObject('MFE Testing Pages/Page_LoginOrCreateA
 WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_username'), username_MFE_testAccount)
 
 WebUI.sendKeys(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/input_password'), password)
+
+WebUI.waitForElementClickable(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/button_signIn'), GlobalVariable.G_smallTimeout)
 
 WebUI.click(findTestObject('MFE Testing Pages/Page_LoginOrCreateAccount/Login/button_signIn'))
 

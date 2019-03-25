@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//p[@id='globalStoreName_desktop']</value>
+         <value>//p[@id='globalStoreName']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
