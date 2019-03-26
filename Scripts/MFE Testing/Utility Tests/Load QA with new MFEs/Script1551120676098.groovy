@@ -20,23 +20,23 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://qa.totalwine.com')
 
-WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
+not_run: WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
 
-Cookie ck1 = new Cookie('2018Q2_OCHEADER', 'enabled')
+not_run: Cookie ck1 = new Cookie('2018Q2_OCHEADER', 'enabled')
 
 Cookie ck2 = new Cookie('2018Q3_CART', 'enabled')
 
-Cookie ck3 = new Cookie('2018Q2_PDP', 'enabled')
+not_run: Cookie ck3 = new Cookie('2018Q2_PDP', 'enabled')
 
 Cookie ck4 = new Cookie('2018Q4_CHECKOUT', 'enabled')
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-driver.manage().addCookie(ck1)
+not_run: driver.manage().addCookie(ck1)
 
 driver.manage().addCookie(ck2)
 
-driver.manage().addCookie(ck3)
+not_run: driver.manage().addCookie(ck3)
 
 driver.manage().addCookie(ck4)
 

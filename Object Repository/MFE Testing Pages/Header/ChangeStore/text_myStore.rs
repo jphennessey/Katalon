@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//p[@id='globalStoreName']</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value>p[id^='globalStoreName']</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
