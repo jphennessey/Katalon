@@ -29,6 +29,8 @@ WebUI.click(findTestObject('MFE Testing Pages/Header/ProductSearch/button_produc
 
 WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Page_PDP/text_quantity'), GlobalVariable.G_mediumTimeout)
 
+CustomKeywords.'com.totalwine.utils.utils.doubleclickAndClear'(findTestObject('MFE Testing Pages/Page_PDP/text_quantity'))
+
 WebUI.setText(findTestObject('MFE Testing Pages/Page_PDP/text_quantity'), GlobalVariable.G_productCount)
 
 'add the item to the cart from the PDP'

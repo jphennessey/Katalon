@@ -43,7 +43,7 @@ public class utils {
 				//				WebUI.sendKeys(to, Keys.chord(Keys.BACK_SPACE))
 				//				contents = WebUI.getAttribute(to, 'value')
 				//				empty = (contents.length() == 0)
-				empty = doubleclickToClear(to)
+				empty = doubleclickAndClear(to)
 			}
 		} catch (Exception e) {
 			KeywordUtil.markFailed("Fail to clear field!")
@@ -51,7 +51,7 @@ public class utils {
 	}
 
 	@Keyword
-	def doubleclickToClear(TestObject to) {
+	def doubleclickAndClear(TestObject to) {
 		WebUI.doubleClick(to)
 		WebUI.sendKeys(to, Keys.chord(Keys.BACK_SPACE))
 		def contents = WebUI.getAttribute(to, 'value')
