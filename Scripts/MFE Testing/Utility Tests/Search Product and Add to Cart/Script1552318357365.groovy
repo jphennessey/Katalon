@@ -39,8 +39,6 @@ WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Page_PDP/button_
 if (GlobalVariable.G_viewCartAfterAdd) {
     WebUI.click(findTestObject('Object Repository/MFE Testing Pages/Page_PDP/button_viewCart'))
 } else {
-    not_run: WebUI.delay(GlobalVariable.G_longTimeout)
-
     WebUI.click(findTestObject('MFE Testing Pages/Page_PDP/icon_closeViewCartModal'))
 }
 
