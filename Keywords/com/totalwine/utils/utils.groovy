@@ -39,13 +39,23 @@ public class utils {
 
 		try {
 			while (!empty && (maxTries-- > 0)) {
-				WebUI.doubleClick(to)
-				WebUI.sendKeys(to, Keys.chord(Keys.BACK_SPACE))
-				contents = WebUI.getAttribute(to, 'value')
-				empty = (contents.length() == 0)
+				//				WebUI.doubleClick(to)
+				//				WebUI.sendKeys(to, Keys.chord(Keys.BACK_SPACE))
+				//				contents = WebUI.getAttribute(to, 'value')
+				//				empty = (contents.length() == 0)
+				empty = doubleclickToClear(to)
 			}
 		} catch (Exception e) {
 			KeywordUtil.markFailed("Fail to clear field!")
 		}
+	}
+
+	@Keyword
+	def doubleclickToClear(TestObject to) {
+		WebUI.doubleClick(to)
+		WebUI.sendKeys(to, Keys.chord(Keys.BACK_SPACE))
+		def contents = WebUI.getAttribute(to, 'value')
+		def empty = (contents.length() == 0)
+		return empty
 	}
 }
