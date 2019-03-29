@@ -27,11 +27,12 @@ WebDriver driver = new ChromeDriver()
 
 DriverFactory.changeWebDriver(driver)
 
-String domainPrefix = 'https://qa.totalwine.com'
+String domainPrefix = domain
 
-WebUI.navigateToUrl(domainPrefix + '/registry/footer-component/1.x.x/~preview')
+String previewSuffix = preview
 
-//WebUI.verifyAllLinksOnCurrentPageAccessible(false, [])
+WebUI.navigateToUrl(domainPrefix + previewSuffix)
+
 WebUI.delay(1)
 
 List linkList = driver.findElements(By.xpath('//div[starts-with(@class, \'aboutUs\')]//a'))
@@ -48,10 +49,11 @@ for (WebElement link : linkList) {
     ro.setRestUrl(url)
 
     ResponseObject resp = WS.sendRequest(ro)
-	
-	String response = resp.getStatusCode()
 
-    println('url:' + url + '\nresponse:' + response)
+    String response = resp.getStatusCode()
+
+    //    println((('url:' + url) + '\nresponse:') + response)
+    WebUI.verifyEqual(response, 200)
 }
 
 WebUI.closeBrowser()

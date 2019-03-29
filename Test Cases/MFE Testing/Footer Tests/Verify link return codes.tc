@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Verify column 1</name>
+   <name>Verify link return codes</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>90eb9e83-6cd1-41f5-8bba-c267dc2d0269</testCaseGuid>
+   <testCaseGuid>1545d353-33db-4f64-ab9b-b157cdbd1927</testCaseGuid>
 </TestCaseEntity>

@@ -22,7 +22,7 @@ import org.openqa.selenium.Keys as Keys
 
 import internal.GlobalVariable
 
-public class utils {
+public class Utils {
 	@Keyword
 	def Boolean isDesktop() {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize()
@@ -53,5 +53,17 @@ public class utils {
 		def contents = WebUI.getAttribute(to, 'value')
 		def empty = (contents.length() == 0)
 		return empty
+	}
+
+	@Keyword
+	def delimitName(String name) {
+		def newName = name.toLowerCase().replaceAll(" ", "-")
+		return newName
+	}
+	
+	@Keyword
+	def getHrefFromFooterElements(String header, String columnElement) {
+		def href = "/" + delimitName(header) + "/" + delimitName(columnElement)
+		return href
 	}
 }

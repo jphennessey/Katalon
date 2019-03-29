@@ -12,37 +12,19 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Cookie as Cookie
+import com.kms.katalon.core.testobject.RequestObject as RequestObject
+import com.kms.katalon.core.testobject.ResponseObject as ResponseObject
+import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.openBrowser('')
+String domainPrefix = 'https://qa.totalwine.com'
 
-WebUI.navigateToUrl('https://qa.totalwine.com')
+WebUI.openBrowser(domainPrefix + '/registry/footer-component/1.x.x/~preview')
 
-not_run: WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
+WebUI.verifyAllLinksOnCurrentPageAccessible(false, [])
 
-not_run: Cookie ck1 = new Cookie('2018Q2_OCHEADER', 'enabled')
-
-not_run: Cookie ck2 = new Cookie('2018Q3_CART', 'enabled')
-
-not_run: Cookie ck3 = new Cookie('2018Q2_PDP', 'enabled')
-
-Cookie ck4 = new Cookie('2018Q4_CHECKOUT', 'enabled')
-
-WebDriver driver = DriverFactory.getWebDriver()
-
-not_run: driver.manage().addCookie(ck1)
-
-not_run: driver.manage().addCookie(ck2)
-
-not_run: driver.manage().addCookie(ck3)
-
-driver.manage().addCookie(ck4)
-
-WebUI.refresh()
-
-WebUI.click(findTestObject('MFE Testing Pages/AgeGate/button_Yes'), FailureHandling.OPTIONAL)
-
-WebUI.waitForPageLoad(GlobalVariable.G_smallTimeout)
+WebUI.closeBrowser()
 

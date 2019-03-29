@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 //import org.openqa.selenium.WebElement as WebElement
 WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), GlobalVariable.G_smallTimeout)
 
-CustomKeywords.'com.totalwine.utils.utils.clearSearchText'(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
+CustomKeywords.'com.totalwine.utils.Utils.clearSearchText'(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'))
 
 'search for an item'
 WebUI.setText(findTestObject('MFE Testing Pages/Header/ProductSearch/input_productFinderSearch'), GlobalVariable.G_productSearch)
@@ -29,7 +29,7 @@ WebUI.click(findTestObject('MFE Testing Pages/Header/ProductSearch/button_produc
 
 WebUI.waitForElementVisible(findTestObject('MFE Testing Pages/Page_PDP/text_quantity'), GlobalVariable.G_mediumTimeout)
 
-CustomKeywords.'com.totalwine.utils.utils.doubleclickAndClear'(findTestObject('MFE Testing Pages/Page_PDP/text_quantity'))
+CustomKeywords.'com.totalwine.utils.Utils.doubleclickAndClear'(findTestObject('MFE Testing Pages/Page_PDP/text_quantity'))
 
 WebUI.setText(findTestObject('MFE Testing Pages/Page_PDP/text_quantity'), GlobalVariable.G_productCount)
 

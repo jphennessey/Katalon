@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>Footer Test Suite</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>10</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>8b2692c0-085e-4685-8037-90e64a821de3</testSuiteGuid>
+   <testCaseLink>
+      <guid>c27e58e2-80fe-4f8c-a64f-1cf9c6c9387f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MFE Testing/Footer Tests/DD Verify column 1</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>fa9ffae8-2dd0-431a-86ee-e55ba12099bc</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Footer/CommonData</testDataId>
+      </testDataLink>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>f5c689d0-d09f-4669-9ffb-f3099fc0c42a</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Footer/MainLinkData</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>fa9ffae8-2dd0-431a-86ee-e55ba12099bc</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>domain</value>
+         <variableId>e3ffe45e-e75d-4a6d-9988-9184b9b84d08</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>fa9ffae8-2dd0-431a-86ee-e55ba12099bc</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>previewSuffix</value>
+         <variableId>50440d3b-67a4-4243-8c68-ecea435a4fb8</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>f5c689d0-d09f-4669-9ffb-f3099fc0c42a</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>header1</value>
+         <variableId>eb6bf154-4ab4-44de-b41c-bca21499cb9b</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>f5c689d0-d09f-4669-9ffb-f3099fc0c42a</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>elementSet1</value>
+         <variableId>1a6e8f53-b142-44e1-b86d-6f01da402fcf</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

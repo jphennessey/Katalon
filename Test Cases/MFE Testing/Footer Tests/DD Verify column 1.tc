@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DD Verify column 1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d75bb924-ed8d-4351-a18a-80542a0322e4</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e3ffe45e-e75d-4a6d-9988-9184b9b84d08</id>
+      <masked>false</masked>
+      <name>domain</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>50440d3b-67a4-4243-8c68-ecea435a4fb8</id>
+      <masked>false</masked>
+      <name>preview</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>eb6bf154-4ab4-44de-b41c-bca21499cb9b</id>
+      <masked>false</masked>
+      <name>header</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1a6e8f53-b142-44e1-b86d-6f01da402fcf</id>
+      <masked>false</masked>
+      <name>element</name>
+   </variable>
+</TestCaseEntity>
