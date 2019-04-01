@@ -27,33 +27,38 @@ WebDriver driver = new ChromeDriver()
 
 DriverFactory.changeWebDriver(driver)
 
-String domainPrefix = domain
-
-String previewSuffix = preview
-
-WebUI.navigateToUrl(domainPrefix + previewSuffix)
+WebUI.navigateToUrl(domain + preview)
 
 WebUI.delay(1)
 
+String expectedElement = element
+
+'get all links under a header'
 List linkList = driver.findElements(By.xpath('//div[starts-with(@class, \'aboutUs\')]//a'))
 
-int numberOfLinks = linkList.size()
+//int numberOfLinks = linkList.size()
 
-RequestObject ro = new RequestObject()
+def found = false
 
-for (WebElement link : linkList) {
-    String url = link.getAttribute('href')
+//for (WebElement link : linkList) {
+//    String actualElement = link.getText()
+//
+//    if (actualElement.equalsIgnoreCase(expectedElement)) {
+//        found = true
+//		break;
+//    } 
+//}
 
-    ro.setRestRequestMethod('GET')
+println('Index = ' + i)
+//int indexInt = index
+WebElement actualElement = linkList.get(i)
+String actualName = actualElement.getText()
 
-    ro.setRestUrl(url)
 
-    ResponseObject resp = WS.sendRequest(ro)
-
-    String response = resp.getStatusCode()
-
-    //    println((('url:' + url) + '\nresponse:') + response)
-    WebUI.verifyEqual(response, 200)
+if (actualName.equalsIgnoreCase(expectedElement)) {
+	assert true
+} else {
+	assert false
 }
 
 WebUI.closeBrowser()

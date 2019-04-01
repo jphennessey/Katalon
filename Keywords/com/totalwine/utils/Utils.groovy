@@ -60,7 +60,7 @@ public class Utils {
 		def newName = name.toLowerCase().replaceAll(" ", "-")
 		return newName
 	}
-	
+
 	@Keyword
 	def getHrefFromFooterElements(String header, String columnElement) {
 		def href = "/" + delimitName(header) + "/" + delimitName(columnElement)

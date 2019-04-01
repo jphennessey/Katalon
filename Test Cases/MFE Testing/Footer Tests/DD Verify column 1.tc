@@ -33,4 +33,11 @@
       <masked>false</masked>
       <name>element</name>
    </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>db98c49a-a4c2-4eab-8449-f3b0dbb70929</id>
+      <masked>false</masked>
+      <name>i</name>
+   </variable>
 </TestCaseEntity>

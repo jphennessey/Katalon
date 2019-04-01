@@ -16,7 +16,7 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/MFE Testing/Footer Tests/DD Verify column 1</testCaseId>
       <testDataLink>
-         <combinationType>ONE</combinationType>
+         <combinationType>MANY</combinationType>
          <id>fa9ffae8-2dd0-431a-86ee-e55ba12099bc</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
@@ -25,8 +25,8 @@
          <testDataId>Data Files/Footer/CommonData</testDataId>
       </testDataLink>
       <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>f5c689d0-d09f-4669-9ffb-f3099fc0c42a</id>
+         <combinationType>MANY</combinationType>
+         <id>b194cdda-9ab1-4a37-a8a6-98a78563d523</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
             <value></value>
@@ -46,16 +46,22 @@
          <variableId>50440d3b-67a4-4243-8c68-ecea435a4fb8</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>f5c689d0-d09f-4669-9ffb-f3099fc0c42a</testDataLinkId>
+         <testDataLinkId>b194cdda-9ab1-4a37-a8a6-98a78563d523</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>header1</value>
          <variableId>eb6bf154-4ab4-44de-b41c-bca21499cb9b</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>f5c689d0-d09f-4669-9ffb-f3099fc0c42a</testDataLinkId>
+         <testDataLinkId>b194cdda-9ab1-4a37-a8a6-98a78563d523</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>elementSet1</value>
          <variableId>1a6e8f53-b142-44e1-b86d-6f01da402fcf</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>b194cdda-9ab1-4a37-a8a6-98a78563d523</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>elementIndex</value>
+         <variableId>db98c49a-a4c2-4eab-8449-f3b0dbb70929</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
