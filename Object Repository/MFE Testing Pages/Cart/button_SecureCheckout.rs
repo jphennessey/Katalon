@@ -6,15 +6,15 @@
    <elementGuidId>1ae147fa-6212-473a-b749-80aa924a3880</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='ESTIMATED TOTAL:'])[1]/following::button[1]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#checkout</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[starts-with(@class, 'checkOutBtn')]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

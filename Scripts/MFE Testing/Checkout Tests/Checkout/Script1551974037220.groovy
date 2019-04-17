@@ -30,7 +30,7 @@ WebUI.callTestCase(findTestCase('MFE Testing/Utility Tests/Change Store'), [:], 
 
 GlobalVariable.G_productSearch = GlobalVariable.G_sku1
 
-GlobalVariable.G_productCount = '2'
+GlobalVariable.G_productCount = '3'
 
 GlobalVariable.G_viewCartAfterAdd = false
 
