@@ -29,7 +29,7 @@ DriverFactory.changeWebDriver(driver)
 
 WebUI.navigateToUrl(domain + preview)
 
-WebUI.delay(1)
+WebUI.delay(2)
 
 String expectedElement = element
 
@@ -37,7 +37,6 @@ String expectedElement = element
 List linkList = driver.findElements(By.xpath('//div[starts-with(@class, \'aboutUs\')]//a'))
 
 //int numberOfLinks = linkList.size()
-
 def found = false
 
 //for (WebElement link : linkList) {
@@ -48,17 +47,17 @@ def found = false
 //		break;
 //    } 
 //}
-
 println('Index = ' + i)
+
 //int indexInt = index
 WebElement actualElement = linkList.get(i)
+
 String actualName = actualElement.getText()
 
-
 if (actualName.equalsIgnoreCase(expectedElement)) {
-	assert true
+    assert true
 } else {
-	assert false
+    assert false
 }
 
 WebUI.closeBrowser()
