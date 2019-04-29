@@ -11,57 +11,15 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>8b2692c0-085e-4685-8037-90e64a821de3</testSuiteGuid>
    <testCaseLink>
-      <guid>c27e58e2-80fe-4f8c-a64f-1cf9c6c9387f</guid>
+      <guid>9693eee5-33fc-48b4-8b6d-414c701b5656</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/MFE Testing/Footer Tests/DD Verify column 1</testCaseId>
-      <testDataLink>
-         <combinationType>MANY</combinationType>
-         <id>fa9ffae8-2dd0-431a-86ee-e55ba12099bc</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/Footer/CommonData</testDataId>
-      </testDataLink>
-      <testDataLink>
-         <combinationType>MANY</combinationType>
-         <id>b194cdda-9ab1-4a37-a8a6-98a78563d523</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/Footer/MainLinkData</testDataId>
-      </testDataLink>
-      <variableLink>
-         <testDataLinkId>fa9ffae8-2dd0-431a-86ee-e55ba12099bc</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>domain</value>
-         <variableId>e3ffe45e-e75d-4a6d-9988-9184b9b84d08</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>fa9ffae8-2dd0-431a-86ee-e55ba12099bc</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>previewSuffix</value>
-         <variableId>50440d3b-67a4-4243-8c68-ecea435a4fb8</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>b194cdda-9ab1-4a37-a8a6-98a78563d523</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>header1</value>
-         <variableId>eb6bf154-4ab4-44de-b41c-bca21499cb9b</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>b194cdda-9ab1-4a37-a8a6-98a78563d523</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>elementSet1</value>
-         <variableId>1a6e8f53-b142-44e1-b86d-6f01da402fcf</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId>b194cdda-9ab1-4a37-a8a6-98a78563d523</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>elementIndex</value>
-         <variableId>db98c49a-a4c2-4eab-8449-f3b0dbb70929</variableId>
-      </variableLink>
+      <testCaseId>Test Cases/MFE Testing/Footer Tests/Verify all links accessible</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6bc4349b-b4c2-48df-9dff-0e649d66fbb8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MFE Testing/Footer Tests/Verify link return codes</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

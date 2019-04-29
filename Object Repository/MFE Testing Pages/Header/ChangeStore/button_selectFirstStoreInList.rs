@@ -6,11 +6,15 @@
    <elementGuidId>e3456ca7-3718-4885-a113-02278068deea</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>button#at_shopThisStore0</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//button[@id='at_shopThisStore0']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

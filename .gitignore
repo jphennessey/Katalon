@@ -6,6 +6,7 @@
 .project
 /.project
 /bin/lib/
+/report/
 /Reports/
 /bin/lib/Temp*.class
 /libs/Temp*.groovy
