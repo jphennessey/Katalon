@@ -15,13 +15,13 @@ import internal.GlobalVariable as GlobalVariable
 
 Mobile.startApplication('/Users/josephhennessey/git_repo/AppiumSerenityPOC/app-releaseDev.apk', true)
 
-Mobile.tap(findTestObject('Mobile/onboarding/LetsBeginButton'), 0)
+Mobile.tap(findTestObject('Mobile/onboarding/LetsBeginButton'), 2)
 
-Mobile.tap(findTestObject('Mobile/onboarding/LINK_turnOnLater'), 0)
+Mobile.tap(findTestObject('Mobile/onboarding/LINK_turnOnLater'), 2)
 
-Mobile.tap(findTestObject('Mobile/onboarding/LINK_notRightNow'), 0)
+Mobile.tap(findTestObject('Mobile/onboarding/LINK_notRightNow'), 2)
 
-Mobile.tap(findTestObject('Mobile/onboarding/LINK_noThanks'), 0)
+Mobile.tap(findTestObject('Mobile/onboarding/LINK_noThanks'), 2)
 
 Mobile.closeApplication()
 
