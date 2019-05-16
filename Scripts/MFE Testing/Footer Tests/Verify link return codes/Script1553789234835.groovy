@@ -33,27 +33,11 @@ WebUI.navigateToUrl(domainPrefix + '/registry/footer-component/1.x.x/~preview')
 
 WebUI.delay(1)
 
-List linkList = driver.findElements(By.xpath('//div[starts-with(@class, \'aboutUs\')]//a'))
+CustomKeywords.'com.totalwine.utils.CheckLinks.verifyAllLinkResponseCodes'('aboutUs')
 
-int numberOfLinks = linkList.size()
+CustomKeywords.'com.totalwine.utils.CheckLinks.verifyAllLinkResponseCodes'('stores')
 
-RequestObject ro = new RequestObject()
-
-for (WebElement link : linkList) {
-    String url = link.getAttribute('href')
-
-    ro.setRestRequestMethod('GET')
-
-    ro.setRestUrl(url)
-
-    ResponseObject resp = WS.sendRequest(ro)
-
-    String response = resp.getStatusCode()
-
-//    println((('url:' + url) + '\nresponse:') + response)
-
-    WebUI.verifyEqual(response, 200)
-}
+CustomKeywords.'com.totalwine.utils.CheckLinks.verifyAllLinkResponseCodes'('customerService')
 
 WebUI.closeBrowser()
 
